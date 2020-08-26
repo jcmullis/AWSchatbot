@@ -2,11 +2,12 @@
 def career_bot():
   print("Welcome to the world of AWS! ")
 
-  size = learning_path()
-  drink_type = tech_background()
-  print("Alright, that\'s a {} learning path with a employment background in {}!".format(size, drink_type))
+  path = learning_path()
+  background = tech_background()
+  opportunities = other_considerations()
+  print("Alright, you have chosen a {} learning path and are coming to us from an employment background in {}! You have also stated that you are {} in relocating.".format(path, background, opportunities))
   
-  name = input("Can I get your name please? \n> ")
+  name = input("Can I get your full name please? \n> ")
   print("Welcome to the world of AWS, {}! Your recommended courses and curriculum will be sent to you shortly! Please let us know if you have any questions or concerns based on our recommendations. Thanks again and have a great day!".format(name))
 
 def learning_path():
@@ -26,7 +27,7 @@ def learning_path():
     return learning_path()  
 
 def print_message():
-  print("I'\m sorry, I did not undersand your selection. Please enter the corresponding letter for your response.")
+  print("I'm sorry, I did not undersand your selection. Please enter the corresponding letter for your response.")
 
 def tech_background():
   res = input("What type of tech background are you coming to us from? \n[a] Support Desk \n[b] Software Engineer \n[c] Tech Consultant \n[d] Application developement \n[e] Security \n> ")
@@ -35,7 +36,7 @@ def tech_background():
   elif res == "b":
     return "Software Engineering"
   elif res == "c":
-    return other_considerations()
+    return "Tech Consulting"
   elif res == "d":
     return "Application Development" 
   elif res == "e":
@@ -45,17 +46,14 @@ def tech_background():
     return tech_background()  
 
 def other_considerations():
-  res = input("Have you considered one of our many inside sales positions working within these regions? \n[a] Southeast USA \n[b] Asia \n[c] Ireland \n[d] No thanks, I'd like to follow my dream of working with AWS \n> ")
+  res = input("Would you be interested in relocating to work within another region outside of your current country of residence? \n[a] Yes \n[b] No \n> ")
   if res == "a":
-    return "Southeast USA"
+    return "interested"
   elif res == "b":
-    return "Asia"
-  elif res == "c":
-    return "Ireland"
-  elif res == "d":
-    return "Tech Consultancy"  
+    return "not interested"
   else:
     print_message()
     return other_considerations()
 
       
+career_bot()
