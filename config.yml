@@ -1,0 +1,23 @@
+# Gulp will reference these paths when it copies files
+PATHS:
+  html:
+    - "./*.html"
+    - "./**/*.html"
+  images:
+    - "src/img/**/*"
+  sass:
+    foundation:
+      - "node_modules/foundation-sites/scss"
+    fontawesome:
+      - "node_modules/@fortawesome/fontawesome-free/scss"
+  javascript:
+    vendors:
+      - "node_modules/jquery/dist/jquery.js"
+      - "node_modules/what-input/dist/what-input.min.js"
+      - "node_modules/foundation-sites/dist/js/foundation.min.js"
+    custom:
+      - "src/js/**/_*.js"
+  fonts:
+    fontawesome:
+      - "node_modules/@fortawesome/fontawesome-free/webfonts/*"
+      - "src/Amazon_Typefaces_Complete_Font_Set_Mar2020/amazon_typography_webfonts_5e593ec/webfonts/*"
